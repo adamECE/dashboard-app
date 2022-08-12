@@ -1,0 +1,105 @@
+.App{
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none; 
+    appearance: none;
+    background: #f2f2f2; 
+    padding: 12px; 
+    border-radius: 3px; 
+    width: 250px; 
+    outline: none; 
+    margin: 0.2rem;
+}
+
+.app-header{
+    display: grid; 
+    grid-template-columns: 1.3fr 1fr;
+} 
+
+.date-header{
+    font-size: 60px; 
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.weather-card {
+    margin: 0.2rem;
+    border: 2px solid black; 
+    border-radius: 1rem;
+    max-width: 120px;
+    max-height: 200px;
+    text-align: center;
+    background: #000000d0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+     
+}
+
+.hr-min-time {
+    font-size: 100px;
+    margin: 0; 
+}
+
+
+@media (max-width: 850px){
+    .app-header{
+        grid-template-columns: 1fr;
+    } 
+    .weather-container{
+        bottom: 0px;
+        position: static; 
+        float: none; 
+    }
+}
+
+@media (min-width: 1600px){
+    .weather-card{
+        max-width: 150px;
+        max-height: 200px;
+    }
+}
+
+.schedule-item{
+    border: 2px solid black; 
+    color: white;
+    max-width: 400px; 
+    min-height: 60px; 
+    max-height: 120px;
+    border-radius: 0.5rem;
+    background: #000000d0;
+    margin: 0.5rem; 
+    padding: 0.2rem;
+}
+
+.schedule-item-btns{
+    float: right; 
+}
+
+.date-picker {
+    border: 2px solid white;
+    background-color: whitesmoke; 
+    width: 80px;
+    text-align: center; 
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+.update-item-input {
+    background: #000000d0;
+    border: none;
+    color: white; 
+    min-height: 60px; 
+}
+
+.add-schedule-item-btn {
+    height: 40px;
+}

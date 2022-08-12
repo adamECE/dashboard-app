@@ -1,0 +1,8 @@
+@import 'C:\Users\Adam\Desktop\dashboard2\node_modules\react-big-calendar\lib\css\react-big-calendar.css';
+.rbc-off-range-bg {
+  background: transparent;
+}
+
+.rbc-today {
+  background-color: rgba(92, 96, 100, 0.055);
+}/*# sourceMappingURL=calendarStyles.css.map */
