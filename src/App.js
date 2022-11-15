@@ -32,7 +32,8 @@ import {v4 as uuidv4} from 'uuid';
     The app is mobile responsive. 
 */
 
-const LOCAL_STORAGE_KEY = "8Mt2kzSyC13eb#kvyPz4Rt";
+const LOCAL_STORAGE_KEY = process.env.LOCAL_STORAGE_KEY;
+const API_KEY = process.env.API_KEY;
 
 const locales = {
     "en-US": require("date-fns/locale/en-US"),
@@ -58,7 +59,7 @@ function App() {
     /* fetch data from weather api */
     useEffect(() => {
       const fetchWeather = async () => {
-        const apiURL = "https://api.openweathermap.org/data/2.5/forecast?lat=32.2319&lon=-110.9501&appid=dc9f2ebbc7cb35bd89a16533ec0313ff&units=imperial"
+        const apiURL = "https://api.openweathermap.org/data/2.5/forecast?lat=32.2319&lon=-110.9501&appid="+API_KEY+"&units=imperial"
         const response = await fetch(apiURL); 
         const weather = await response.json(); 
         handleWeatherInfo(weather)
