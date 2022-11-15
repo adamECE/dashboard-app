@@ -1,3 +1,17 @@
+/*
+  Author: Adam Hoffmeister
+  Filename: App.js
+  Purpose: Create a basic dashboard that is composed of four parts: 
+    1. The current date.
+    2. The weather forecast for the day.
+    3. A displayed schedule that can be edited by the user. 
+    4. A calendar that displays schedule items.
+
+    The weather forecasted is given by the OpenWeatherMaps public api service. DatePicker, date-fns, and
+    react-big-calendar are all being used to help create the schedule and calendar within the program. 
+    The app is mobile responsive. 
+*/
+
 import React, { useState, useEffect } from "react";
 // import date picker, date fns, and react-big-calendar 
 import format from "date-fns/format";
@@ -16,21 +30,6 @@ import Schedule from './components/Schedule';
 import Weather from './components/Weather';
  
 import {v4 as uuidv4} from 'uuid';
-
-
-/*
-  Author: Adam Hoffmeister
-  Filename: App.js
-  Purpose: Create a basic dashboard that is composed of four parts: 
-    1. The current date.
-    2. The weather forecast for the day.
-    3. A displayed schedule that can be edited by the user. 
-    4. A calendar that displays schedule items.
-
-    The weather forecasted is given by the OpenWeatherMaps public api service. DatePicker, date-fns, and
-    react-big-calendar are all being used to help create the schedule and calendar within the program. 
-    The app is mobile responsive. 
-*/
 
 const LOCAL_STORAGE_KEY = process.env.LOCAL_STORAGE_KEY;
 const API_KEY = process.env.API_KEY;
